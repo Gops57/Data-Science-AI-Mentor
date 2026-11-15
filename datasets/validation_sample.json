@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sql_0322",
+    "category": "Practical/application",
+    "instruction": "Write a SQL solution to find the most expensive product per category.",
+    "response": "A suitable approach is:\n```sql\nWITH ranked AS (SELECT p.*, ROW_NUMBER() OVER (PARTITION BY category ORDER BY price DESC) AS rn FROM products p) SELECT * FROM ranked WHERE rn = 1;\n```\nRank rows within each category and keep the first."
+  },
+  {
+    "id": "machine_learning_0006",
+    "category": "Concept explanations",
+    "instruction": "Why is calibration important in machine learning?",
+    "response": "Calibration asks whether predicted probabilities correspond to observed frequencies. A model can rank cases well while still producing poorly calibrated probabilities."
+  },
+  {
+    "id": "python_0167",
+    "category": "Comparisons",
+    "instruction": "Compare list with tuple in Python.",
+    "response": "Lists are mutable and use square brackets; tuples are immutable and are commonly written with parentheses."
+  },
+  {
+    "id": "deep_learning_0293",
+    "category": "Code / implementation questions",
+    "instruction": "How can I implement create a PyTorch optimizer..",
+    "response": "optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-4)\n\nThis configures AdamW with a learning rate and weight decay."
+  },
+  {
+    "id": "python_0028",
+    "category": "Concept explanations",
+    "instruction": "How does shallow versus deep copy work in Python?",
+    "response": "A shallow copy creates a new outer container but keeps references to nested objects. A deep copy recursively copies nested objects, which can prevent shared nested mutable state when appropriate."
+  },
+  {
+    "id": "data_wrangling_0167",
+    "category": "Best practices",
+    "instruction": "What is the benefit of following this practice: choose charts based on the analytical question",
+    "response": "Start with what the viewer needs to compare, track, distribute, or relate, then select a chart whose visual encoding supports that task."
+  },
+  {
+    "id": "statistics_0096",
+    "category": "Basic concepts / definitions",
+    "instruction": "What is random variable?",
+    "response": "random variable is a variable whose value is determined by the outcome of a random experiment. It is commonly used when analyzing data and communicating statistical results."
+  },
+  {
+    "id": "statistics_0213",
+    "category": "Concept explanations",
+    "instruction": "Why is sampling bias important in statistical analysis?",
+    "response": "Sampling bias occurs when the selection process systematically favors some population members or outcomes."
+  },
+  {
+    "id": "deep_learning_0284",
+    "category": "Scenario-based questions",
+    "instruction": "Scenario 4: A student fine-tunes a language model and training loss decreases while validation loss rises. What should the Data Scientist do?",
+    "response": "The model is likely overfitting. Check data quality and splits, reduce training duration, use early stopping, regularization, augmentation, or parameter-efficient adaptation as appropriate."
+  },
+  {
+    "id": "python_0006",
+    "category": "Practical / application",
+    "instruction": "Explain how to solve this programming task in Python: parse a CSV file.",
+    "response": "For simple files use the `csv` module; for analytical tabular work, pandas provides convenient parsing and validation tools."
+  }
+]

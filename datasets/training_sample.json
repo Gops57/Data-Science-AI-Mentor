@@ -1,0 +1,62 @@
+[
+  {
+    "id": "data_visualization_0084",
+    "category": "Basic concepts / definitions",
+    "instruction": "What does scale mean?",
+    "response": "Scale refers to the mapping between data values and visual positions, lengths, colors, or other encodings. A well-chosen scale preserves meaningful comparisons."
+  },
+  {
+    "id": "sql_0262",
+    "category": "Practical/application",
+    "instruction": "Write a SQL solution to find the latest order for each customer.",
+    "response": "A suitable approach is:\n```sql\nWITH ranked AS (SELECT o.*, ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date DESC) AS rn FROM orders o) SELECT * FROM ranked WHERE rn = 1;\n```\nROW_NUMBER selects one latest row per customer."
+  },
+  {
+    "id": "python_0748",
+    "category": "Concept explanations",
+    "instruction": "Explain keyword arguments.",
+    "response": "Keyword arguments pass values by parameter name, improving readability and allowing arguments to be supplied in a different order when the function signature permits it."
+  },
+  {
+    "id": "data_wrangling_0111",
+    "category": "Basic concepts / definitions",
+    "instruction": "What is data validation in data wrangling?",
+    "response": "Data validation is checking whether data satisfy expected rules, formats, ranges, and relationships. Validation helps prevent invalid records from entering later analytical stages."
+  },
+  {
+    "id": "deep_learning_0031",
+    "category": "Debugging / common mistakes",
+    "instruction": "Why is this implementation incorrect? The model checkpoint is overwritten every epoch even when validation performance worsens.",
+    "response": "Save checkpoints conditionally based on the selected validation metric or keep versioned checkpoints."
+  },
+  {
+    "id": "python_0772",
+    "category": "Basic concepts / definitions",
+    "instruction": "Define while loop.",
+    "response": "While loop refers to a loop that repeatedly executes while a condition remains true A `while` loop is useful when the number of iterations depends on a changing condition."
+  },
+  {
+    "id": "sql_0346",
+    "category": "Scenario-based",
+    "instruction": "A database developer faces this requirement: A data cleanup job must update only rows meeting a precise condition. What should they do?",
+    "response": "Preview the target rows with SELECT first, then run UPDATE with the same WHERE condition inside a controlled transaction.\nOne implementation is:\n```sql\nBEGIN; UPDATE customers SET status = 'Inactive' WHERE last_login < DATE '2025-01-01'; COMMIT;\n```"
+  },
+  {
+    "id": "deep_learning_0397",
+    "category": "Concept explanations",
+    "instruction": "Explain LoRA in detail for a Data Science student.",
+    "response": "LoRA adds low-rank trainable updates to selected weight transformations while keeping the original weights frozen. It reduces trainable parameter count and memory requirements."
+  },
+  {
+    "id": "data_visualization_0319",
+    "category": "Practical / application",
+    "instruction": "How should a Data Scientist present outlier detection in transaction amounts visually?",
+    "response": "Use a box plot, histogram, or scatter plot to reveal unusually large or small transactions, then investigate whether flagged values are errors or legitimate observations."
+  },
+  {
+    "id": "python_0038",
+    "category": "Concept explanations",
+    "instruction": "Explain Python garbage collection.",
+    "response": "Python implementations manage memory automatically. CPython primarily uses reference counting and also has a cyclic garbage collector to detect reference cycles that reference counting alone cannot reclaim."
+  }
+]

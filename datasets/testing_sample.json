@@ -1,0 +1,62 @@
+[
+  {
+    "id": "statistics_0101",
+    "category": "Debugging / common mistakes",
+    "instruction": "Why is this statistical reasoning incorrect, and what is a better approach? A student concludes that correlation proves causation.",
+    "response": "Correlation measures association. A causal conclusion requires an appropriate experimental design or credible causal identification strategy."
+  },
+  {
+    "id": "machine_learning_0311",
+    "category": "Comparisons",
+    "instruction": "Compare K-means and hierarchical clustering.",
+    "response": "K-means requires a chosen number of clusters and iteratively updates centroids; hierarchical clustering builds a tree of nested groups."
+  },
+  {
+    "id": "data_wrangling_0071",
+    "category": "Code / implementation questions",
+    "instruction": "Show Python/pandas code to concatenate two DataFrames vertically.",
+    "response": "combined = pd.concat([df1, df2], ignore_index=True)"
+  },
+  {
+    "id": "python_0063",
+    "category": "Code / implementation questions",
+    "instruction": "How can I implement use a generator function in Python?",
+    "response": "def squares(n):\n    for i in range(n):\n        yield i * i"
+  },
+  {
+    "id": "python_0744",
+    "category": "Concept explanations",
+    "instruction": "Give a detailed explanation of shallow versus deep copy.",
+    "response": "A shallow copy creates a new outer container but keeps references to nested objects. A deep copy recursively copies nested objects, which can prevent shared nested mutable state when appropriate."
+  },
+  {
+    "id": "machine_learning_0414",
+    "category": "Code / implementation questions",
+    "instruction": "How can I implement split data into training and testing sets in Python?",
+    "response": "from sklearn.model_selection import train_test_split\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.2, random_state=42, stratify=y\n)\n\nUse stratify for classification when appropriate."
+  },
+  {
+    "id": "sql_0765",
+    "category": "Code/SQL",
+    "instruction": "Provide a SQL query for find customers whose average order exceeds 5000.",
+    "response": "```sql\nSELECT customer_id, AVG(amount) AS avg_amount FROM orders GROUP BY customer_id HAVING AVG(amount) > 5000;\n```\nExplanation: HAVING filters customers after the average is calculated."
+  },
+  {
+    "id": "python_0440",
+    "category": "Concept explanations",
+    "instruction": "Explain range.",
+    "response": "`range()` represents an arithmetic progression of integers and is commonly used for iteration. It is lazy-like in that it does not construct a full list of integers."
+  },
+  {
+    "id": "data_visualization_0029",
+    "category": "Best practices",
+    "instruction": "Give an example of good practice for use clear labels and units.",
+    "response": "Axes, legends, titles, and annotations should communicate what values represent and what units are being used."
+  },
+  {
+    "id": "data_visualization_0203",
+    "category": "Basic concepts / definitions",
+    "instruction": "What does data storytelling mean?",
+    "response": "Data storytelling refers to the practice of combining data, visual evidence, and explanatory narrative to communicate a meaningful message. Good storytelling connects the visualization to a clear analytical question."
+  }
+]
