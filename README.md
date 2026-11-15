@@ -62,11 +62,11 @@ Data-Science-AI-Mentor/
 │   └── welcome_animation.json
 ├── screenshots/
 │   ├── screenshot_dark.png
-    ├── screenshot_light.png
+│   ├── screenshot_light.png
 │   └── screenshot_print.png
 └── datasets/
-    ├── training_sample.json
     ├── testing_sample.json
+    ├── training_sample.json
     └── validation_sample.json
 ```
 
@@ -98,7 +98,7 @@ model weight shards.
 ### 1. Clone or download this repository
 
 ``` bash
-git clone <   >
+git clone <https://github.com/Gops57/Data-Science-AI-Mentor.git>
 cd Data-Science-AI-Mentor
 ```
 
