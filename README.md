@@ -43,7 +43,6 @@ The dataset was split into training (80%), validation (10%), and test
 -   Python
 -   Streamlit
 -   Microsoft Phi-3 Mini
--   Hugging Face Transformers
 -   PyTorch
 -   Accelerate
 -   Safetensors
@@ -59,14 +58,16 @@ Data-Science-AI-Mentor/
 ├── app_final.py
 ├── requirements.txt
 ├── README.md
-├── .gitignore
 ├── assets/
 │   └── welcome_animation.json
 ├── screenshots/
-│   ├── dashboard.png
-│   └── chatbot.png
+│   ├── screenshot_dark.png
+    ├── screenshot_light.png
+│   └── screenshot_print.png
 └── datasets/
-    └── (optional dataset files)
+    ├── training_sample.json
+    ├── testing_sample.json
+    └── validation_sample.json
 ```
 
 Use your actual screenshot and dataset filenames. The dataset is not
@@ -97,7 +98,7 @@ model weight shards.
 ### 1. Clone or download this repository
 
 ``` bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone <   >
 cd Data-Science-AI-Mentor
 ```
 
